@@ -1,0 +1,160 @@
+/*
+    THANK YOU FOR DOWNLOAD 
+    PLEASE FOLLLOW ME 
+    CODING BY : MOHAMMAD MAHMOUD BATOUS
+
+*/
+
+*{
+    padding: 0px;
+    box-sizing: border-box;
+    margin: 0px;
+    font-family: "Noto Kufi Arabic", sans-serif;}
+:root {
+    --color-black:#071E3D;
+    --color-teal :#21E6C1;
+    --color-teal-thinck:#278EA5;
+}
+html {
+    height: 100%;
+}
+body {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-black);
+}
+body main div {
+    padding: 25px;
+    border: 2px solid white;
+    border-radius: 300px;
+}
+body main div > img {
+    width: 200px;
+    height: 200px;
+    animation: circle 0s infinite linear;
+}
+body aside {
+    display: flex;
+
+}
+
+body aside .btn {
+    padding:  10px 20px;
+    outline: none;
+    border: none;
+    border-radius: 200px;
+    cursor: pointer;
+    transition:all 400ms ease ;
+    margin: 5px;
+}
+body aside.controller > button{
+    margin-top: 10px;
+    color: white;
+    font-weight: bold;
+    display: flex ;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+body aside.controller  button .icon img {
+    width: 26px !important;
+    margin: 0px 3px;
+}
+body aside.controller .btn-on{
+    /* rgb(202, 67, 67)*/
+    background-color:var(--color-teal) ;
+}
+body aside.controller .btn-switch {
+    background-color: var(--color-teal-thinck);
+}
+body aside.btn-speed .btn {
+  
+    padding: 10px;
+    width: 44px;
+    color: var(--color-teal);
+    background-color: transparent;
+    border: 1px solid var(--color-teal);
+}
+/* start swip */
+body .swip {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: #071e3d6b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+body .swip .swip-box {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    gap: 5px;
+    padding: 35px 10px;
+    border-radius: 5px;
+    background-color: white;
+}
+body .swip .swip-box .close {
+    position: absolute;
+    right: 15px;
+    top: 1px;
+    font-size: 18px;
+    color: var(--color-black);
+    cursor: pointer;
+}
+body .swip .swip-box div  {
+    cursor: pointer;
+    padding: 10px 15px;
+    background-color: var(--color-black);
+    border-radius: 200px;
+}
+body .swip .swip-box div img {
+    width: 70px;
+    height: 70px;
+}
+
+
+/* end swip */
+
+/*start footer*/
+footer {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    padding: 10px;
+    background-color: #071e3da8;
+    text-align: center;
+    color: white;
+}
+/*end footer*/
+
+
+
+
+.active {
+    background-color: var(--color-teal) !important;
+    color: white !important;
+}
+.hide {
+    display: none !important;
+}
+
+@media (min-width : 900px){
+    body main div > img {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+@keyframes circle {
+   
+    to {
+        transform: rotate(360deg);
+    }
+}
